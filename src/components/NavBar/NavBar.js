@@ -3,7 +3,7 @@ import './NavBar.css';
 import Search from '../Search/Search';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext';
-import used from '/Users/anamyavats/Downloads/RecPo/vplay/client/src/images/images.jpeg';
+
 import { RiAccountCircleFill } from "react-icons/ri";
 import { SiGooglebard } from "react-icons/si";
 
