@@ -12,7 +12,7 @@ function NavBar() {
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
-  const [photo, setPhoto] = useState(used);
+  // const [photo, setPhoto] = useState(used);
 
   const handleLogout = async () => {
     try {
