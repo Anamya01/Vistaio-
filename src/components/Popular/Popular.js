@@ -9,7 +9,6 @@ function Popular(param) {
     useEffect(() => {
       fetchData(param).then(res => setList(res.data.results))    
     }, [param]);
-    console.log(Lists);
   return (
     <div className='Popular-container'>
       { Lists == [] ? (<p>Loading</p>) :
