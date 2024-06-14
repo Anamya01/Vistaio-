@@ -42,14 +42,12 @@ export default function BasicModal(props) {
     }
     setlists(renderedEpisodes);
   },[clicked, Seasonclicked, 2]);
-  console.log("rendered",lists)
   //Not Function 
   let url = props.url;
   if (props.shows) {
     url = `https://moviesapi.club/tv/${props.showid}-${Seasonclicked}-${EpisodeId}`
   }
   //Not Functional
-  console.log("Hello Nigga = ", props.EpisodeList);
 
   let title = props.data.param.title;
   let overview = props.data.param.overview;
