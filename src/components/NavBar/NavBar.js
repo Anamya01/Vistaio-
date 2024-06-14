@@ -35,7 +35,6 @@ function NavBar() {
   const showHandlerClose = () => {
     setShow(false);
   }
-  console.log(user);
 
 
   return (
