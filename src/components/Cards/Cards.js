@@ -28,7 +28,6 @@ function Cards(param) {
         fetch(`https://api.themoviedb.org/3/tv/${param.param.id}?api_key=${api}`)
         .then(res => res.json())
         .then(data => {
-          console.log(data);
           setSeason(data.seasons);
           SetShow(true);
         });
@@ -36,14 +35,12 @@ function Cards(param) {
         for(var i = 0; i < length; i++){
           Episode_count[i] = season[i].episode_count;
         }
-        console.log("sjdn=",season)
         SetEpisodes(Episode_count);
       }
        url = `https://moviesapi.club/tv/${param.param.id}-1-1`; //resovle it mannnn.
     }
   },[param.media, param.param.media_type, modal])
   // not funcitonal
-  console.log("count=",Episode);
 
   const Modal_click_Handle = () =>{
     clickedmodal(modal ? false : true);
