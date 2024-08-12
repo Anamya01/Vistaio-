@@ -14,11 +14,11 @@
 }.Popular-container::-webkit-scrollbar {
     display: none;
   }
-@media only screen and (max-width: 600px){
+  @media only screen and (max-width: 600px){
     .Popular-container{
-        width: 90%;
-        margin-left: 20px;
-        height: 25vh;
+        width: 98%;
+        margin-left: 1%;
+        height: 20vh;
         gap: 6px;
     }
 }
