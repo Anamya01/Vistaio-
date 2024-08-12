@@ -145,7 +145,20 @@
 }
 @media only screen and (max-width: 600px){
     .signin{
-        width: 90%;
+        width: 95%;
+        top: 50%;
+        left: 50%;
+    }
+    .side-ground{
+        display: none;
+    }
+    .btn-span{
+        display: flex;
+        width: 40vw;
+        margin-top: 10px;
+    }
+    .signup-google{
+        width: 50%;
     }
 }
 
