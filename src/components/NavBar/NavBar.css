@@ -6,13 +6,13 @@
     src: url('../../fonts/ErotiqueAlternateTrial-Regular.ttf');
 }
 @font-face {
-    font-family: "Erotiqa";
-    src: url('../../fonts/ErotiqueTrial-Regular.ttf');
+    font-family: "Juli";
+    src: url('../../fonts/Julitho\ Regular.ttf');
 }
 .NavBar{
     width: 97.5vw;
     height: 70px;
-    background-color: black;
+    background: none;
     display: flex;
     color: #fff;
     align-items: center;
@@ -20,6 +20,7 @@
     padding: 10px;
     padding-left: 20px;
     padding-right: 20px;
+    z-index: 200;
 }
 .user{
     display: flex;
@@ -48,7 +49,6 @@
     gap: 100px;
 }
 .vistaio h1{
-    font-family: 'Righteous', sans-serif;
     color: #f20e89;
     font-family: "Erotiqa";
     color: rgb(214,85,24);
