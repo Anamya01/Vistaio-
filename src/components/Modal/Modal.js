@@ -73,7 +73,7 @@ export default function BasicModal(props) {
         <Box className="Boxmodel">
           <iframe className='frametag' src={url} allow="fullscreen"></iframe>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            {title}< span className='avg_vote' > > {rating} </span>
+            {title}< span className='avg_vote' >{rating} </span>
           </Typography>
           {props.shows ? <div className='Season_Div'>{props.EpisodeList.map((data, index) => 
           <SeasonBtn 
