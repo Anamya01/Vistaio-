@@ -52,6 +52,8 @@ export default function BasicModal(props) {
   let title = props.data.param.title;
   let overview = props.data.param.overview;
   let rs = props.data.param.release_date;
+  let rating = props.data.param.vote_average;
+  rating = rating.toFixed(1);
   overview = overview ? overview : '';
   if (title === undefined) {
     title = props.data.param.name;
