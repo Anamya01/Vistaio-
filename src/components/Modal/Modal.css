@@ -24,6 +24,10 @@ iframe{
 #rs-date{
     color: rgb(214,85,24);
 }
+.avg_vote{
+    color: rgb(241, 255, 47);
+    font-size: .9rem;
+}
 .Boxmodel{
   position: absolute;
   top: 50%;
