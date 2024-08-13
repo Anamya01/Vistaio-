@@ -25,8 +25,16 @@ iframe{
     color: rgb(214,85,24);
 }
 .avg_vote{
-    color: rgb(241, 255, 47);
-    font-size: .9rem;
+    margin-left: 5px;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+    background-color: rgba(48,24,12,255);
+    color: rgb(214,85,24);
+    border: .1px solid rgb(101, 39, 10);
+    padding: 3px;
+    border-radius: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
 }
 .Boxmodel{
   position: absolute;
