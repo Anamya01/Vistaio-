@@ -4,10 +4,8 @@ import { HiViewGridAdd } from "react-icons/hi";
 import { UserAuth } from '../../context/AuthContext';
 import { db } from '../../firebase';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
-
-
 import BasicModal from '../Modal/Modal';
-import GetMovieInfo from '../../GetMovieInfo';
+
 function Cards(param) {
   console.log(param);
   const [like, setLike] = useState(false);
