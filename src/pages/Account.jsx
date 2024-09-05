@@ -7,7 +7,7 @@ function Account() {
     <div>
       
       <NavBar />
-      <p className='whish'>My List</p>
+      <p className='whish'></p>
       <Saved />
     </div>
   )
