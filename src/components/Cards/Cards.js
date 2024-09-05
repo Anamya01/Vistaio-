@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react'
 import './Cards.css';
-import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import { HiViewGridAdd } from "react-icons/hi";
 import { UserAuth } from '../../context/AuthContext';
 import { db } from '../../firebase';
 import { arrayUnion, doc, updateDoc } from 'firebase/firestore';
 
 
 import BasicModal from '../Modal/Modal';
+import GetMovieInfo from '../../GetMovieInfo';
 function Cards(param) {
-
+  console.log(param);
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
   const [season, setSeason] = useState([]);
@@ -18,7 +19,8 @@ function Cards(param) {
   const { user } = UserAuth();
   var Episode_count = [];
   const movieID = doc(db, 'users', `${user?.email}`);
-  //UseEffect this is not finctional
+  const type = param.media ? param.media : (param.param.media_type ? param.param.media_type : 'movie');
+  //UseEffect this is not functional
   useEffect(()=>{
     if(param.media === "tv" || param.param.media_type === 'tv'){
         var showid = param.param.id;
@@ -75,11 +77,8 @@ function Cards(param) {
       setSaved(true);
       await updateDoc(movieID, {
         savedShows: arrayUnion({
-          id: id,
-          title: title,
-          img: param.param.backdrop_path,
-          url: url,
-          rs: rs,
+          data: param,
+          type: type,
         }),
       });
     } else {
@@ -111,9 +110,9 @@ function Cards(param) {
         </div>
         <p onClick={saveShow} className="hrt">
           {like ? (
-            <FaHeart className='heart' />
+            <HiViewGridAdd className='heart' />
           ) : (
-            <FaRegHeart className='heartlike' />
+            <HiViewGridAdd className='heartlike' />
           )}
         </p>
       </div>
