@@ -9,6 +9,10 @@
     font-family: "Juli";
     src: url('../../fonts/Julitho\ Regular.ttf');
 }
+@font-face {
+    font-family: "graphyne";
+    src: url('../../fonts/Graphyne-Regular.otf');
+}
 .NavBar{
     width: 97.5vw;
     height: 70px;
@@ -50,9 +54,10 @@
 }
 .vistaio h1{
     color: #f20e89;
-    font-family: "Erotiqa";
+    font-family: "graphyne";
     color: rgb(214,85,24);
     letter-spacing: .5px;
+    font-weight: lighter;
 }
 
 .vistaio p{
@@ -106,6 +111,16 @@ a{
 .bars .userName{
     color: rgb(214,85,24);
     margin: 5px;
+}#topstrem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+.favr{
+    color: rgb(214,85,24);
 }
 .account-box{
     height: 19px;
