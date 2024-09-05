@@ -3,8 +3,8 @@ import './NavBar.css';
 import Search from '../Search/Search';
 import { Link, useNavigate } from 'react-router-dom';
 import { UserAuth } from '../../context/AuthContext';
-
 import { RiAccountCircleFill } from "react-icons/ri";
+import { HiViewGridAdd } from "react-icons/hi";
 import { SiGooglebard } from "react-icons/si";
 
 
@@ -12,7 +12,7 @@ function NavBar() {
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
   const [show, setShow] = useState(false);
-  // const [photo, setPhoto] = useState(used);
+
 
   const handleLogout = async () => {
     try {
@@ -35,13 +35,11 @@ function NavBar() {
   const showHandlerClose = () => {
     setShow(false);
   }
-
-
   return (
     <div className='NavBar'>
       <div className='vistaio'>
-        <Link to='/' > <h1>Vistaio <SiGooglebard className='vistaio-star' /> </h1> </ Link>
-        <p id='topstrem'>Top Streaming</p>
+        <Link to='/' > <h1>Vistaio</h1> </ Link>
+        <Link to='/account' ><p id='topstrem'>Drop-dead List<HiViewGridAdd className='favr'/> </p></Link>
       </div>
       <div className='user'>
         {user?.email && <Search className="srch"></Search>}
