@@ -7,6 +7,8 @@ import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { provider } from '../firebase';
 import { FcGoogle } from "react-icons/fc";
 import { TfiGoogle } from "react-icons/tfi";
+import { doc, setDoc } from "firebase/firestore"; 
+import {  db  } from '../firebase';
 
 import './Login.css';
 function Login() {
@@ -36,7 +38,7 @@ function Login() {
   const GoogleSignUp = () => {
     const auth = getAuth();
     signInWithPopup(auth, provider)
-      .then((result) => {
+      .then(async(result) => {
         // This gives you a Google Access Token. You can use it to access the Google API.
         const credential = GoogleAuthProvider.credentialFromResult(result);
         const token = credential.accessToken;
@@ -44,6 +46,9 @@ function Login() {
         const user = result.user;
         // IdP data available using getAdditionalUserInfo(result)
         // ...
+        await setDoc(doc(db, "users", user.email), {
+          saveShow: [],
+        });
         navigate('/');
       }).catch((error) => {
         // Handle Errors here.
