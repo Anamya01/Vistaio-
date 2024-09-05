@@ -58,6 +58,7 @@
     font-size: 1.5rem;
     font-weight: 500;
     border-radius: 10px;
+    border:none;
 }
 .option{
     width: 232px;
