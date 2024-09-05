@@ -4,19 +4,6 @@ import './SearchPage.css';
 import { IoSearchOutline } from 'react-icons/io5';
 import Searches from '../components/Searches/Searches';
 import Latest from '../components/Latest/Latest';
-function SearchPage() {
-    const [media, setMedia] = useState(true);
-    const [SearchValue, setValue] = useState('');
-    const mediaHandlerTrue = () => {
-        setMedia(true);
-    }
-    const mediaHandlerFalse = () => {
-        setMedia(false);import React, { useState } from 'react'
-import NavBar from '../components/NavBar/NavBar'
-import './SearchPage.css';
-import { IoSearchOutline } from 'react-icons/io5';
-import Searches from '../components/Searches/Searches';
-import Latest from '../components/Latest/Latest';
 import Gradient from '../components/Gradient/Gradient';
 import ProtectedRoute from '../components/ProtectedRoute';
 function SearchPage() {
