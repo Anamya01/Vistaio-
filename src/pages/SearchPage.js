@@ -4,7 +4,6 @@ import './SearchPage.css';
 import { IoSearchOutline } from 'react-icons/io5';
 import Searches from '../components/Searches/Searches';
 import Latest from '../components/Latest/Latest';
-import Gradient from '../components/Gradient/Gradient';
 import ProtectedRoute from '../components/ProtectedRoute';
 function SearchPage() {
     const [media, setMedia] = useState(true);
@@ -37,7 +36,6 @@ function SearchPage() {
         </form>
         </div>
         {SearchValue === '' ? <Latest param = "trending" /> : <Searches param = {SearchValue} media = {media ? 'movie' : 'tv'}/>}
-        <Gradient/>
     </div>
     </ProtectedRoute>
   )
