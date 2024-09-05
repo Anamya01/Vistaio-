@@ -37,7 +37,7 @@ function Saved() {
 
   return (
     <div className='container1'>
-    { Lists == [] ? (<p></p>) : (Lists.map(items => <Cards param={items.data.param} media = {items.type} />))}
+    { Lists == undefined ? (<p></p>) : (Lists.map(items => <Cards param={items.data.param} media = {items.type} />))}
   </div>
   )
 }
