@@ -1,5 +1,4 @@
 import React from 'react'
-import SavedShows from './SavedShows';
 import './SavedShows.css';
 import { useState, useEffect } from 'react';
 
