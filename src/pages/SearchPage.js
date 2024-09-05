@@ -44,30 +44,3 @@ function SearchPage() {
 }
 
 export default SearchPage
-    }
-    const ChangeHandler = (e) => {
-        setValue(e.target.value);
-    }
-    const SubmitHandler = (e) => {
-        e.preventDefault();
-        console.log(SearchValue);
-    }
-  return (
-    <div>
-        <NavBar />
-        <div  className='searcher'>
-        <form onSubmit={SubmitHandler}>
-            <input value={SearchValue} onChange={ChangeHandler} placeholder='Search'></input>
-            <button type='Submit'><IoSearchOutline /></button>
-            <div className='option'>
-            <div className={media === true ? 'movie clicked' : 'movie'} onClick={mediaHandlerTrue}>Movies</div>
-            <div className={media === false ? 'series clicked' : 'series'} onClick={mediaHandlerFalse}>Series</div>
-        </div>
-        </form>
-        </div>
-        {SearchValue === '' ? <Latest param = "trending" /> : <Searches param = {SearchValue} media = {media ? 'movie' : 'tv'}/>}
-    </div>
-  )
-}
-
-export default SearchPage
