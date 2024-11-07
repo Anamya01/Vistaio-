@@ -38,7 +38,7 @@ function NavBar() {
   return (
     <div className='NavBar'>
       <div className='vistaio'>
-        <Link to='/' > <h1>Vistaio</h1> </ Link>
+        <Link to='/' > <h1></h1> </ Link>
         <Link to='/account' ><p id='topstrem'>Drop-dead List<HiViewGridAdd className='favr'/> </p></Link>
       </div>
       <div className='user'>
